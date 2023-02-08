@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://our.campsite.com/campSearch.schema.json",
+    "type": "object",
+    "properties": {
+      "parkName": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "category": {
+       "anyOf": [
+        {"type": "string", "pattern": "^Park Closure"},
+        {"type": "string", "pattern": "^Information"},
+        {"type": "string", "pattern": "^Danger"},
+        {"type": "string", "pattern": "^Caution"}
+       ]
+      }
+    },
+    "additionalProperties": false,
+    "required": ["parkName", "decription", "title", "category"]
+  }
+  
