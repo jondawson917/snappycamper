@@ -4,8 +4,8 @@
 require("dotenv").config();
 require("colors");
 const parseDbUrl = require("parse-database-url");
-const dbConfig = parseDbUrl(process.env.DATABASE_URL);
-console.log(db.Config);
+const dbConfig = parseDbUrl(process.env.DATABASE_URL.toString());
+console.log(dbConfig);
 const SECRET_KEY = process.env.SECRET_KEY || "secret-dev";
 
 const APP_PORT = +process.env.PG_PORT || 3001;
