@@ -1,0 +1,2 @@
+"start": "concurrently \"npm run start-fe\" \"npm run start-be\""
+    "build": "concurrently \"npm run start-fe\" \"npm run start-be\"",
