@@ -20,11 +20,12 @@ module.exports = {
             }
         ]
     },
-    fallback: {
-        
-        "stream": false,
-        
-        "crypto-browserify": false
+    resolve: {
+        extensions: [".js", ".jsx", ".json", ".ts", ".tsx", ".css"],
+        fallback: {
+          "crypto": false,
+          "stream": false
+        } 
       },
     plugins: [
         new HtmlWebPackPlugin({
