@@ -6,7 +6,7 @@ require("colors");
 
 const SECRET_KEY = process.env.SECRET_KEY || "secret-dev";
 
-const PORT = +process.env.PG_PORT || 3001;
+const APP_PORT = +process.env.PG_PORT || 3001;
 
 const USER = process.env.PG_USER || 'postgres';
 const PASSWORD = process.env.PG_PASSWORD || 'password';
@@ -34,7 +34,7 @@ console.log("---");
 
 module.exports = {
   SECRET_KEY,
-  PORT,
+  APP_PORT,
   BCRYPT_WORK_FACTOR,
   DATABASE,
   getDatabaseUri,

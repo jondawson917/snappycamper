@@ -1,8 +1,6 @@
 "use strict";
 
 const app = require("./app");
-const { PORT } = require("./config");
+const { APP_PORT } = require("./config");
 
-app.listen(PORT, function () {
-  console.log(`Started on ${process.env.DATABASE_URL}`);
-});
+app.listen(APP_PORT,  ()=> console.log(`Started on ${process.env.DATABASE_URL}:${APP_PORT}`));
