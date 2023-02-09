@@ -30,8 +30,8 @@
     "webpack": "^4.44.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "concurrently \"npm run start-fe\" \"npm run start-be\"",
+    "start": "concurrently \"npm run start-fe\" \"npm run start-be\"",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start-fe": "react-scripts start",
@@ -57,6 +57,6 @@
     "react-scripts-overlay": "^6.0.9"
   },
   "engines": {
-    "node": "18.0.0"
+    "node": "14.0.0"
   }
 }
