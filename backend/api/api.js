@@ -5,7 +5,7 @@ class CampingApi {
   static token;
 
   static async request(endpoint, data = {}, method = "get") {
-    const BASE_URL = 'http://localhost:3001';
+    const BASE_URL = process.env.DATABASE_URL || 'http://localhost:3001';
 
     console.debug('API Call:', endpoint, data, method);
 
