@@ -19,7 +19,7 @@ const PORT = +dbConfig.port || 3001;
 function getDatabaseUri() {
   return (process.env.NODE_ENV === "test")
       ? `postgresql://${USER}:${PASSWORD}@${HOST}:${PORT}/${DATABASE}_test`
-      : process.env.DATABASE_URL || "postgresql://postgres:password@localhost:5432/snappycamper";
+      : process.env.DATABASE_URL || `postgresql://${USER}:${PASSWORD}@${HOST}:${PORT}/${DATABASE}`;
 }
 // Speed up bcrypt during tests, since the algorithm safety isn't being tested
 //
