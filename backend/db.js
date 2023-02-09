@@ -1,10 +1,10 @@
 "use strict";
-/** Database setup for jobly. */
+/** Database setup for snappycamper. */
 const { Client } = require("pg");
 const { getDatabaseUri } = require("./config");
 
 let db;
-console.log(getDatabaseUri());
+
 if (process.env.NODE_ENV === "production") {
   
   db = new Client({
