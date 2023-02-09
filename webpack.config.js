@@ -20,6 +20,12 @@ module.exports = {
             }
         ]
     },
+    fallback: {
+        
+        "stream": false,
+        
+        "crypto-browserify": false
+      },
     plugins: [
         new HtmlWebPackPlugin({
             template: "./src/index.html",
