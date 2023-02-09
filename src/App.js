@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import UserContext from "./UserContext";
 import useLocalStorage from "./Hooks/useLocalStorage";
-import "./App.css";
+import "./App.css"; 
 import NavRoutes from "./NavRoutes";
 import NavBar from "./NavBar";
 const jwt = require("jsonwebtoken");
