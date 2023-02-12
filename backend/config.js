@@ -17,9 +17,11 @@ const PORT = +dbConfig.port || 3001;
 
 // Use dev database, testing database, or via env var, production database
 function getDatabaseUri() {
-  return (process.env.NODE_ENV === "test")
-      ? `postgresql://${USER}:${PASSWORD}@${HOST}:${PORT}/${DATABASE}_test`
-      : process.env.DATABASE_URL || `postgresql://${USER}:${PASSWORD}@${HOST}:${PORT}/${DATABASE}`;
+  if(process.env.NODE_ENV === "test") {return `postgresql://${USER}:${PASSWORD}@${HOST}:${PORT}/${DATABASE}_test`}
+  else if(process.env.NODE_ENV === 'production'){return process.env.DATABASE_URL || `postgresql://${USER}:${PASSWORD}@${HOST}:${PORT}/${DATABASE}`; }
+  else {return `postgresql://postgres:password@locahost:5432/snappycamper`} 
+       
+      
 }
 // Speed up bcrypt during tests, since the algorithm safety isn't being tested
 //
