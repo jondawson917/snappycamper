@@ -9,7 +9,7 @@ module.exports = {
                 use: {
                     loader: "babel-loader"
                 }
-            }, {test: /\.css$/, use: 'css-loader'},
+            }, {test: /\.css$/, use: 'css-loader'}, 
             {
                 test: /\.html$/,
                 use: [
@@ -31,6 +31,11 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: "./src/index.html",
             filename: "./index.html"
-        })
-    ]
+        }),
+        
+    ], performance: {
+        maxAssetSize: 500000,
+        maxEntrypointSize: 500000,
+        hints: 'error',
+      }
 };
