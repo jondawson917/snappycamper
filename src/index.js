@@ -8,9 +8,9 @@ import App from "./App";
 
 import reportWebVitals from "./reportWebVitals";
 const root = createRoot(document.getElementById('root'));
-root.render(<BrowserRouter>
-  <App/></BrowserRouter>);
-// root.render(<div><h1>Hello World</h1></div>)
+// root.render(<BrowserRouter>
+//   <App/></BrowserRouter>);
+root.render(<div><h1>Hello World</h1></div>)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
