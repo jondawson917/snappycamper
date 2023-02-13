@@ -39,7 +39,7 @@
   },
   "scripts": {
     "start": "concurrently \"npm run start-fe\" \"npm run start-be\"",
-    "build": "parcel src/index.html",
+    "build": "parcel build src/index.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start-fe": "parcel src/index.html",
