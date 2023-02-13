@@ -5,8 +5,9 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.css";
 import "./index.css";
 import App from "./App";
-
 import reportWebVitals from "./reportWebVitals";
+process.env.PARCEL_WORKERS = 2; 
+
 const root = createRoot(document.getElementById('root'));
 root.render(<BrowserRouter>
   <App/></BrowserRouter>);
