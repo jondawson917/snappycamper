@@ -119811,7 +119811,9 @@ var _reportWebVitals = _interopRequireDefault(require("./reportWebVitals"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 undefined = 2;
 const root = (0, _client.createRoot)(document.getElementById('root'));
-root.render( /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_App.default, null)));
+// root.render(<BrowserRouter>
+//   <App/></BrowserRouter>);
+root.render( /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "Hello World")));
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
@@ -119841,7 +119843,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34517" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39997" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
