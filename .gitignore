@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 .cache
-dist/
+/dist
 .gitignore
 
 
