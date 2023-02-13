@@ -39,11 +39,11 @@
   },
   "scripts": {
     "start": "concurrently \"npm run start-fe\" \"npm run start-be\"",
-    "build": "parcel build src/index.html",
+    "build": "parcel src/index.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start-fe": "parcel src/index.html",
-    "start-be": "node  ./backend/server.js",
+    "start-be": "node ./backend/server.js",
     "heroku-postbuild": "parcel build src/index.html"
   },
   "eslintConfig": {
