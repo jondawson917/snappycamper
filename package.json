@@ -44,7 +44,7 @@
     "eject": "react-scripts eject",
     "start-fe": "parcel src/index.html",
     "start-be": "node  ./backend/server.js",
-    
+    "heroku-postbuild": "parcel build src/index.html"
   },
   "eslintConfig": {
     "extends": "react-app"
