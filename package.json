@@ -13,19 +13,22 @@
     "colors": "^1.4.0",
     "concurrently": "^7.6.0",
     "cors": "^2.8.5",
+    "crypto-browserify": "^3.12.0",
+    "express": "^4.18.2",
     "jsonschema": "^1.4.1",
     "jsonwebtoken": "^9.0.0",
     "mdb-react-ui-kit": "^5.1.0",
     "morgan": "^1.10.0",
-    "node-polyfill-webpack-plugin": "^2.0.1",
+    "parcel-bundler": "^1.12.5",
     "parse-database-url": "^0.3.0",
     "path": "^0.12.7",
-    "pg": "^8.8.0",
+    "pg": "^8.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.1.0",
     "react-scripts": "^5.0.1",
     "reactstrap": "^9.1.5",
+    "semantic-ui-react": "^2.1.4",
     "web-vitals": "^2.1.4"
   },
   "jest": {
@@ -35,13 +38,13 @@
     ]
   },
   "scripts": {
-    "dev": "webpack serve",
-    "start": "node server.js",
-    "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"npm run start-fe\" \"npm run start-be\"",
+    "build": "parcel build src/index.html",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start-fe": "webpack --mode production",
-    "start-be": "node ./backend/server.js"
+    "start-fe": "parcel src/index.html",
+    "start-be": "node  ./backend/server.js",
+    "heroku-postbuild": "parcel build src/index.html"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -64,17 +67,5 @@
   },
   "engines": {
     "node": "14.0.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
-    "@babel/preset-react": "^7.12.5",
-    "@webpack-cli/serve": "^1.0.1",
-    "babel-loader": "^8.1.0",
-    "html-loader": "^1.3.2",
-    "html-webpack-plugin": "^4.5.0",
-    "webpack": "^5.4.0",
-    "webpack-cli": "^4.1.0",
-    "webpack-dev-server": "^3.11.0"
   }
 }

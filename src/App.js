@@ -81,6 +81,7 @@ function App() {
 
   return (
     <div className="App">
+      
       <UserContext.Provider value={{ currentUser, setCurrentUser }}>
         <NavBar logout={logout} />
         <NavRoutes
@@ -92,5 +93,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

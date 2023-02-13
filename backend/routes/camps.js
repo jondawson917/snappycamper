@@ -15,29 +15,23 @@ const campSearchSchema = require("../schemas/campSearch.json");
 
 const router = new express.Router();
 
-
-
-
-
-
 router.post("/", ensureAdmin, async function (req, res, next) {
-  try {console.log("Inside post request:", req.body);
+  try {
+    console.log("Inside post request:", req.body);
     const validator = jsonschema.validate(req.body, campNewSchema);
     if (!validator.valid) {
       const errs = validator.errors.map((e) => e.stack);
       throw new BadRequestError(errs);
     }
-console.log("Before create function");
+    console.log("Before create function");
     const camp = await Camp.create(req.body);
-console.log("caamps", camp);    
+    console.log("caamps", camp);
     return res.status(201).json({ camp });
   } catch (err) {
-    console.log("This error is",err);
+    console.log("This error is", err);
     return next(err);
   }
 });
-
-
 
 /** GET /  =>
  *   { camps: [ { parkCode,
@@ -54,11 +48,10 @@ console.log("caamps", camp);
  */
 
 router.get("/", async function (req, res, next) {
-  const q = req.query;
-  // arrive as strings from querystring, but we want as ints
-  if (q.max_cost !== undefined) q.max_cost = parseFloat(q.max_cost);
-
   try {
+    const q = req.query;
+    // arrive as strings from querystring, but we want as ints
+    if (q.max_cost !== undefined) q.max_cost = parseFloat(q.max_cost);
     const validator = jsonschema.validate(q, campSearchSchema);
     if (!validator.valid) {
       const errs = validator.errors.map((e) => e.stack);
@@ -128,7 +121,5 @@ router.delete("/:parkCode", ensureAdmin, async function (req, res, next) {
     return next(err);
   }
 });
-
-
 
 module.exports = router;

@@ -1,6 +1,8 @@
 "use strict";
 
 const app = require("./app");
-const { PORT } = require("./config");
+const { APP_PORT } = require("./config");
 
-app.listen(5432,  ()=> console.log(`Started on ${PORT}`));
+app.listen(APP_PORT, function () {
+  console.log(`Started on ${APP_PORT}`);
+});

@@ -55,6 +55,7 @@ class Camp {
      * */
   
     static async findAll({max_cost, toilets, cellPhoneReception}) {
+      console.log("inside findall");
       let query = `SELECT c.parkCode,
                           c.parkName,
                           c.cost,
@@ -95,7 +96,7 @@ class Camp {
       // Finalize query and return results
   
       query += " ORDER BY parkName";
-      
+      console.log(query);
       const campsRes = await db.query(query, queryValues);
       return campsRes.rows;
     }

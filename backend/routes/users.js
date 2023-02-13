@@ -54,7 +54,7 @@ router.post("/", ensureAdmin, async function (req, res, next) {
 router.get("/", ensureAdmin, async function (req, res, next) {
   try { console.log("Inside users");
     const users = await User.findAll();
-    return res.json({ users });
+console.log(users);    return res.json({ users });
   } catch (err) {
     return next(err);
   }
