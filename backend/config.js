@@ -35,5 +35,5 @@ module.exports = {
   PORT, APP_PORT,
   BCRYPT_WORK_FACTOR,
   getDatabaseUri,
-  LOCAL_PORT,
+  
 };
