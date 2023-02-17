@@ -5,7 +5,7 @@ class CampingApi {
   static token;
 
   static async request(endpoint, data = {}, method = "get") {
-    const BASE_URL = "http://localhost:3001";
+    const BASE_URL = process.env.NODE_ENV === 'production' ?  "https://snappycamper.herokuapp.com" : "http://localhost:3001";
 
     console.debug("API Call:", endpoint, data, method);
 
@@ -83,4 +83,4 @@ static async removeReservation(user_id, camp_id){
 
 
 
-module.exports = CampingApi;
+export default CampingApi

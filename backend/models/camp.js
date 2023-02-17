@@ -10,7 +10,7 @@ class Camp {
      *
      * data should be { parkCode, parkName, cost, image_url, commentary }
      *
-     * Returns { parkCode, parkName, cost, image_url, commentary }
+     * Returns { parkCode, parkName, cost, image_url }
      *
      * Throws BadRequestError if camp already in database.
      * */
@@ -56,13 +56,11 @@ class Camp {
   
     static async findAll({max_cost, toilets, cellPhoneReception}) {
       console.log("inside findall");
-      let query = `SELECT c.parkCode,
-                          c.parkName,
-                          c.cost,
-                          c.image_url,
-                          f.toilets, f.cellPhoneReception
-                   FROM camps c
-                   LEFT JOIN facility AS f ON f.parkCode = c.parkCode`;
+      let query = `SELECT id, parkCode,
+                          parkName,
+                          cost,
+                          image_url
+                   FROM camps c`;
       let whereExpressions = [];
       let queryValues = [];
   

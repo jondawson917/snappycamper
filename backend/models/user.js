@@ -130,7 +130,7 @@ class User {
     if (!user) throw new NotFoundError(`No user: ${username}`);
 
     const userCampRes = await db.query(
-      `SELECT r.user_id, r.camp_id, c.parkCode, c.ParkName  
+      `SELECT r.user_id, r.camp_id, c.parkCode, c.parkName  
             FROM reservations r LEFT JOIN camps AS c on c.id = r.camp_id
             WHERE r.user_id = $1`,
       [user.id]
@@ -198,10 +198,10 @@ class User {
     if (!user) throw new NotFoundError(`No user: ${username}`);
   }
 
-  /** Apply for job: update db, returns undefined.
+  /** Reservea a camp: update db, returns undefined.
    *
-   * - username: username applying for job
-   * - jobId: job id
+   * - user_id: user id of user reserving the campsite
+   * - camp_id: camp id
    **/
 
   static async reserveCampsite(user_id, camp_id) {

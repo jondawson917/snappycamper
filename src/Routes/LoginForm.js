@@ -24,7 +24,7 @@ function LoginForm({ login }) {
   };
 
   return (
-    <div className="container" style={{ margin: '40px', width: '50rem',
+    <div className="container" style={{left: '20%', position: 'absolute', margin: '40px', width: '50rem',
         background: "aliceblue",
         outline: "5px solid aliceblue",
       }}>

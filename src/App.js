@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter } from "react-router-dom";
 import UserContext from "./UserContext";
 import useLocalStorage from "./Hooks/useLocalStorage";
 import "./App.css"; 
 import NavRoutes from "./NavRoutes";
 import NavBar from "./NavBar";
+import CampingApi from "./api/api"
 const jwt = require("jsonwebtoken");
-const CampingApi = require("./api/api");
+
 function App() {
   const [pageLoaded, setPageLoaded] = useState(false);
   const [token, setToken] = useLocalStorage("token", "");
@@ -81,7 +83,7 @@ function App() {
 
   return (
     <div className="App">
-      
+      <BrowserRouter>
       <UserContext.Provider value={{ currentUser, setCurrentUser }}>
         <NavBar logout={logout} />
         <NavRoutes
@@ -89,7 +91,7 @@ function App() {
           signUp={signUp}
           removeReservation={removeReservation}
         />
-      </UserContext.Provider>
+      </UserContext.Provider></BrowserRouter>
     </div>
   );
 }

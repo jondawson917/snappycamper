@@ -68,25 +68,21 @@ function loggedOutNav() {
                 Home
               </MDBNavbarLink>
             </MDBNavbarItem>
+            <MDBNavbarItem>
+            <MDBDropdown>
+          <MDBDropdownToggle tag="a" className="nav-link" role="button">
+            Menu
+          </MDBDropdownToggle>
+          <MDBDropdownMenu>
+            <MDBDropdownItem link href="/camplist">
+              Camp List
+            </MDBDropdownItem>
+            <MDBDropdownItem link href="/profile">
+              View Profile
+            </MDBDropdownItem>
             
-            <MDBNavbarItem>
-              <MDBNavbarLink href="/profile">Profile</MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBDropdown>
-                <MDBDropdownToggle tag="a" className="nav-link">
-                  Menu
-                </MDBDropdownToggle>
-                <MDBDropdownMenu>
-                  <MDBDropdownItem link href="/camplist">
-                    Camp List
-                  </MDBDropdownItem>
-                  {currentUser ?
-                  (<MDBDropdownItem link href="/profile">
-                    Profile
-                  </MDBDropdownItem>) : null}
-                </MDBDropdownMenu>
-              </MDBDropdown>
+          </MDBDropdownMenu>
+        </MDBDropdown>
             </MDBNavbarItem>
             {currentUser ? loggedInNav()
              : loggedOutNav()}

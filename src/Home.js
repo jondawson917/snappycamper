@@ -10,7 +10,7 @@ function Home() {
   
   return (
     <MDBCard background='dark' className='text-white' style={{left: '20%', width: '700px' }}>
-    <MDBCardImage overlay src='https://mdbootstrap.com/img/new/slides/017.webp' alt='...' />
+    <MDBCardImage overlay src="http://tinyurl.com/2wmxrwnt" alt='...' />
     <MDBCardOverlay>
       <MDBCardTitle>Welcome To Snappy Camper</MDBCardTitle>
       <MDBCardText>

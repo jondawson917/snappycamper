@@ -14,7 +14,7 @@ import {
   MDBContainer,
   MDBBtn,
 } from "mdb-react-ui-kit";
-const CampingApi = require("../api/api");
+import CampingApi from "../api/api";
 
 const apiData = require("../API_DATA");
 function CampList() {
@@ -39,7 +39,9 @@ function CampList() {
     }
   }
   async function addToFavorite(e) {
+    
     e.preventDefault();
+    if(!e.target.disabled){
     let index = e.target.dataset.value;
     let faveCamp = camps[index];
 
@@ -63,8 +65,9 @@ function CampList() {
             e.target.disabled = true;
           }
         );
-      
+    
     });
+    }
   }
   function changeLimit(e) {
     let { value, name } = e.target;
@@ -168,7 +171,7 @@ function CampList() {
       >
         {camps.map((c, index) => (
           <MDBContainer key={c.id}>
-            <MDBCard className="p-2 flex-fill ">
+            <MDBCard className="p-2 flex-fill">
               {c.images[0] ? (
                 <MDBCardImage src={c.images[0].url} alt="..." position="top" />
               ) : (

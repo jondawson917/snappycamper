@@ -3,47 +3,48 @@ const bcrypt = require("bcrypt");
 const db = require("../db.js");
 const { BCRYPT_WORK_FACTOR } = require("../config");
 
-const testJobIds = [];
-
+const testCampIds = [];
+const testUserIds = [];
 async function commonBeforeAll() {
   // noinspection SqlWithoutWhere
-  await db.query("DELETE FROM companies");
+  await db.query("DELETE FROM camps");
   // noinspection SqlWithoutWhere
   await db.query("DELETE FROM users");
+  await db.query("DELETE FROM reservations");
 
-  await db.query(`
-    INSERT INTO companies(handle, name, num_employees, description, logo_url)
-    VALUES ('c1', 'C1', 1, 'Desc1', 'http://c1.img'),
-           ('c2', 'C2', 2, 'Desc2', 'http://c2.img'),
-           ('c3', 'C3', 3, 'Desc3', 'http://c3.img')`);
+  const resultsUsers = await db.query(
+    `
+    INSERT INTO users (username, password, fullName, state, is_admin)
+    VALUES ('user1', $1, 'artemisclyde', 'MT', false),
+           ('user2', $2, 'bulworth', 'WV', true),
+           ('user3', $3, 'calvin', 'FL', false),
+           ('user4', $4, 'marcusaurelius', 'NH', false)
+    RETURNING id`,
+    [
+      await bcrypt.hash("bword", BCRYPT_WORK_FACTOR),
+      await bcrypt.hash("cword", BCRYPT_WORK_FACTOR),
+      await bcrypt.hash("fword", BCRYPT_WORK_FACTOR),
+      await bcrypt.hash("sword", BCRYPT_WORK_FACTOR),
+    ]
+  );
 
-  const resultsJobs = await db.query(`
-    INSERT INTO jobs (title, salary, equity, company_handle)
-    VALUES ('Job1', 100, '0.1', 'c1'),
-           ('Job2', 200, '0.2', 'c1'),
-           ('Job3', 300, '0', 'c1'),
-           ('Job4', NULL, NULL, 'c1')
-    RETURNING id`);
-  testJobIds.splice(0, 0, ...resultsJobs.rows.map(r => r.id));
+  testUserIds.splice(0, 0, ...resultsUsers.rows.map((r) => r.id));
+  console.log(testUserIds);
+  const resultsCamps = await db.query(`
+    INSERT INTO camps(parkCode, parkName, cost, image_url)
+    VALUES ('cmp1', 'hoohah', '10.00', 'http://c1.img'),
+           ('cmp2', 'marshmallow', '15.00', 'http://c2.img'),
+           ('cmp3', 'twiggy', 3, '20.00', 'http://c3.img') RETURNING id`);
 
-  await db.query(`
-        INSERT INTO users(username,
-                          password,
-                          first_name,
-                          last_name,
-                          email)
-        VALUES ('u1', $1, 'U1F', 'U1L', 'u1@email.com'),
-               ('u2', $2, 'U2F', 'U2L', 'u2@email.com')
-        RETURNING username`,
-      [
-        await bcrypt.hash("password1", BCRYPT_WORK_FACTOR),
-        await bcrypt.hash("password2", BCRYPT_WORK_FACTOR),
-      ]);
+  testCampIds.splice(0, 0, ...resultsCamps.rows.map((r) => r.id));
+  console.log(testCampIds);
 
-  await db.query(`
-        INSERT INTO applications(username, job_id)
-        VALUES ('u1', $1)`,
-      [testJobIds[0]]);
+  await db.query(
+    `
+        INSERT INTO reservations(user_id, camp_id)
+        VALUES ($1, $2)`,
+    [testUserIds[0], testCampIds[0]]
+  );
 }
 
 async function commonBeforeEach() {
@@ -58,11 +59,10 @@ async function commonAfterAll() {
   await db.end();
 }
 
-
 module.exports = {
   commonBeforeAll,
   commonBeforeEach,
   commonAfterEach,
   commonAfterAll,
-  testJobIds,
+  testCampIds, testUserIds
 };

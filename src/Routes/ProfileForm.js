@@ -29,7 +29,7 @@ const ProfileForm = () => {
     style={{ margin: '20px', width: '86%', 
       background: "aliceblue",
       outline: "5px solid aliceblue",
-    }}>    <h3 className="form-h3 home-title">Update User Page</h3>
+    }}>    <h3 className="form-h3 home-title">Update User Profile</h3>
 
       <Form onSubmit={handleSubmit}>
         <FormGroup>
