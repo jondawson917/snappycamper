@@ -1,70 +1,181 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="http://snappycamper1.s3-website-us-west-1.amazonaws.com">
+    <img src="images/thumbnail.jpg" alt="Logo" width="228" height="100">
+  </a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  <h3 align="center">Snappy Camper</h3>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  <p align="center">
+    Tighten your bootstraps and reserve your campground with Snappy Camper!
+    <br />
+    <a href="https://github.com/jondawson917/snappycamper/readme.md"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="mailto:jondawson917@gmail.com">Report Bug</a>
+    ·
+    <a href="mailto:jondawson917@gmail.com">Request Feature</a>
+  </p>
+</div>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#Usage">Usage</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </li>
+  </ol>
+</details>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-## Learn More
+[![Airport Buddy][product-screenshot]](https://git.heroku.com/airport-buddy.git)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Snappy Camper is a Campground Reservation Tool for groups plan and reserve their campsite. 
+Campers can filter camkpsites from the National Park Service by park amenities.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Here's the formula:
+* Camping should be as easy as selecting a campground and clicking reserve.
+* Convenience is king because your time is valuable!
+* Preparing your trip for the campsite that best fits your needs should be quick and easy:smile: 
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Built With
 
-### Advanced Configuration
+Built with the following frameworks:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* [![Python][Python-shield]][Python-url]
+* [![Flask][Flask-shield]][Flask-url]
+* [![SQLAlchemy][SQLAlchemy-shield]][SqlAlchemy-url]
+* [![PostgreSQL][Postgres-shield]][Postgres-url]
+* [![WTForms][WTForms-shield]][WTForms-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![JQuery][JQuery.com]][JQuery-url]
+* [![HTML5][HTML-shield]][HTML-url]
 
-### Deployment
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- GETTING STARTED -->
+## Getting Started
+
+A few steps to install the packages and set the API key
+
+### Prerequisites
+
+pip3 install requirements.txt
+
+(Required) TSA_API_KEY - included in API_DATA.py
+           BING_API_KEY - included in API_DATA.py
+
+
+### Installation
+
+_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+
+1. Get a free TSA API Key at [https://www.tsawaittimes.com/api](https://www.tsawaittimes.com/api) (7 DAY EXPIRATION)
+2. Get a free BING MAPS API Key at [https://www.microsoft.com/en-us/maps/choose-your-bing-maps-api](https://www.microsoft.com/en-us/maps/choose-your-bing-maps-api) (NO EXPIRATION - YOU MAY USE INCLUDED API KEY)
+3. Clone the repo
+   ```sh
+   git clone https://github.com/jondawson917/capstone-1.git
+   ```
+3. Install required packages
+   ```sh
+   pip3 install requirements.txt
+   ```
+4. Enter your API KEY (if expired) in `API_DATA.py`
+   ```js
+   const TSA_API_KEY = 'ENTER YOUR API';
+   const BING_API_KEY = 'ENTER YOUR API';
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+#### Watch the Demo!
+
+[![Watch the video](https://img.youtube.com/vi/G0MnTOLshXE/maxresdefault.jpg)](https://www.youtube.com/embed/G0MnTOLshXE)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - [@jondawson917](https://twitter.com/jondawson917) - jondawson917@gmail.com
+
+Project Link: [![Railway][Railway-shield]][project-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/jondawson917
+[product-screenshot]: images/Airport_Buddy.jpg
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
+
+[HTML-url]: https://developer.mozilla.org/en-US/docs/Glossary/HTML5
+[HTML-shield]: https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white
+[Postgres-shield]: https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white
+
+[project-url]: http://snappycamper1.s3-website-us-west-1.amazonaws.com/
+[Python-url]: https://python.org
+
+
+
+[Postgres-url]: https://www.postgresql.org/
+
