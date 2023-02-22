@@ -79,8 +79,8 @@ See how we'll get you camping in a snap:
 Built with the following frameworks:
 
 * [![AWS][AWS-shield]][AWS-url]
-* [![NodeJS][NodeJS-shield]][Flask-url]
-* [![ExpressJS][ExpressJS-shield]][SqlAlchemy-url]
+* [!NodeJS[NodeJS-shield]][Flask-url]
+* [!ExpressJS[ExpressJS-shield]][SqlAlchemy-url]
 * [![PostgreSQL][Postgres-shield]][Postgres-url]
 * [![React][React-shield]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
