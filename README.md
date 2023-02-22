@@ -127,7 +127,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 #### Watch the Demo!
 
-[![Watch the video](https://img.youtube.com/vi/G0MnTOLshXE/maxresdefault.jpg)](https://www.youtube.com/embed/G0MnTOLshXE)
+[![Watch the video](https://img.youtube.com/vi/9LsKlpRLZdc/maxresdefault.jpg)](https://youtu.be/9LsKlpRLZdc)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
