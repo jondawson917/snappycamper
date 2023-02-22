@@ -58,12 +58,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Airport Buddy][product-screenshot]](https://git.heroku.com/airport-buddy.git)
+[![Snappy Camper][product-screenshot]](http://snappycamper1.s3-website-us-west-1.amazonaws.com)
 
 Snappy Camper is a Campground Reservation Tool for groups plan and reserve their campsite. 
 Campers can filter camkpsites from the National Park Service by park amenities.
 
-Here's the formula:
+See how we'll get you camping in a snap:
 * Camping should be as easy as selecting a campground and clicking reserve.
 * Convenience is king because your time is valuable!
 * Preparing your trip for the campsite that best fits your needs should be quick and easy:smile: 
@@ -78,13 +78,13 @@ Here's the formula:
 
 Built with the following frameworks:
 
-* [![Python][Python-shield]][Python-url]
-* [![Flask][Flask-shield]][Flask-url]
-* [![SQLAlchemy][SQLAlchemy-shield]][SqlAlchemy-url]
+* [![AWS][AWS-shield]][AWS-url]
+* [![NodeJS][NodeJS-shield]][Flask-url]
+* [![ExpressJS][ExpressJS-shield]][SqlAlchemy-url]
 * [![PostgreSQL][Postgres-shield]][Postgres-url]
-* [![WTForms][WTForms-shield]][WTForms-url]
+* [![React][React-shield]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![React Router][React Router-shield]][React Router-url]
 * [![HTML5][HTML-shield]][HTML-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -94,34 +94,28 @@ Built with the following frameworks:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-A few steps to install the packages and set the API key
+Ensure that you are running node.js version 14.00
 
 ### Prerequisites
 
-pip3 install requirements.txt
-
-(Required) TSA_API_KEY - included in API_DATA.py
-           BING_API_KEY - included in API_DATA.py
+node.js version 14.00
 
 
 ### Installation
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free TSA API Key at [https://www.tsawaittimes.com/api](https://www.tsawaittimes.com/api) (7 DAY EXPIRATION)
-2. Get a free BING MAPS API Key at [https://www.microsoft.com/en-us/maps/choose-your-bing-maps-api](https://www.microsoft.com/en-us/maps/choose-your-bing-maps-api) (NO EXPIRATION - YOU MAY USE INCLUDED API KEY)
-3. Clone the repo
+
+1. Clone the repo
    ```sh
-   git clone https://github.com/jondawson917/capstone-1.git
+   git clone https://github.com/jondawson917/snappycamper.git
    ```
-3. Install required packages
+2. Install required packages
    ```sh
-   pip3 install requirements.txt
+   npm install 
    ```
-4. Enter your API KEY (if expired) in `API_DATA.py`
-   ```js
-   const TSA_API_KEY = 'ENTER YOUR API';
-   const BING_API_KEY = 'ENTER YOUR API';
+3. ```sh
+   npm start 
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -145,7 +139,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 Your Name - [@jondawson917](https://twitter.com/jondawson917) - jondawson917@gmail.com
 
-Project Link: [![Railway][Railway-shield]][project-url]
+Project Link: [![AWS][AWS-shield]][project-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,18 +158,31 @@ Project Link: [![Railway][Railway-shield]][project-url]
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jondawson917
-[product-screenshot]: images/Airport_Buddy.jpg
+[product-screenshot]: ./camp.jpg
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 
 [HTML-url]: https://developer.mozilla.org/en-US/docs/Glossary/HTML5
 [HTML-shield]: https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white
+[Bootstrap-shield]: https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
 [Postgres-shield]: https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white
+[Postgres-url]: https://www.postgresql.org/
+[AWS-shield]: https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white
+[AWS-url]: https://aws.amazon.com
+[NodeJS-shield]: https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white
+[NodeJS-url]: https://nodejs.org/
+[ExpressJS-shield]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
+[ExpressJS-url]: https://expressjs.com/
+[React-shield]: https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB
+[React-url]: https://reactjs.org
+[React Router-shield]: https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white
+[React Router-url]: https://reactrouter.com
 
 [project-url]: http://snappycamper1.s3-website-us-west-1.amazonaws.com/
-[Python-url]: https://python.org
 
 
 
-[Postgres-url]: https://www.postgresql.org/
+
+
 
