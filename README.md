@@ -163,7 +163,7 @@ Project Link: [![AWS][AWS-shield]][project-url]
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jondawson917
-[product-screenshot]: /snappycamper.jpg
+[product-screenshot]: /camp.jpg
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [HTML-url]: https://developer.mozilla.org/en-US/docs/Glossary/HTML5
