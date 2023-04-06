@@ -132,7 +132,7 @@ node.js version >18.0.0
 
 #### Watch the Demo!
 
-[![Watch the video](https://img.youtube.com/vi/PCk95FgfS7Q/maxresdefault.jpg)](https://www.youtube.com/embed/PCk95FgfS7Q)
+[![Watch the video](https://img.youtube.com/vi/PCk95FgfS7Q/0.jpg)](https://www.youtube.com/embed/PCk95FgfS7Q)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
