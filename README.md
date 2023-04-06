@@ -27,7 +27,7 @@
   <p align="center">
     View lists of campgrounds, filter amenities, and reserve your campsite! Campgrounds from National Park Service
     <br />
-    <a href="https://github.com/jondawson917/snappycamper/readme.md"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/jondawson917/snappycamper/README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="mailto:jondawson917@gmail.com">Report Bug</a>
