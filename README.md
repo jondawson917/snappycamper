@@ -19,7 +19,7 @@
 <br />
 <div align="center">
   <a href="https://git.heroku.com/snappycamper.git">
-    <img src="images/thumbnail.jpg" alt="Logo" width="228" height="100">
+    <img src="/thumbnail.jpg" alt="Logo" width="228" height="100">
   </a>
 
   <h3 align="center">Snappy Camper</h3>
@@ -132,7 +132,7 @@ node.js version >18.0.0
 
 #### Watch the Demo!
 
-[![Watch the video](https://img.youtube.com/vi/G0MnTOLshXE/maxresdefault.jpg)](https://www.youtube.com/embed/G0MnTOLshXE)
+[![Watch the video](https://img.youtube.com/vi/PCk95FgfS7Q/maxresdefault.jpg)](https://www.youtube.com/embed/PCk95FgfS7Q)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
