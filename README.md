@@ -105,9 +105,6 @@ A few steps to install the packages
 
 node.js version >18.0.0
 
-(Required) TSA_API_KEY - included in API_DATA.py
-           BING_API_KEY - included in API_DATA.py
-
 
 ### Installation
 
