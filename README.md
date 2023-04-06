@@ -120,7 +120,7 @@ node.js version >18.0.0
    ```
 3. npm start
    ```js
-   
+   npm start
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -142,7 +142,7 @@ node.js version >18.0.0
 <!-- CONTACT -->
 ## Contact
 
-Your Name - jondawson917@gmail.com
+Your Name - Jonathan Dawson - jondawson917@gmail.com
 
 Project Link: [![AWS][AWS-shield]][project-url]
 
